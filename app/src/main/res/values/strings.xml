@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">24012011117_MAD_Practical-4</string>
+    <string name="alarm_banner_desc">Alarm clock illustration</string>
+    <string name="create_alarm_time">Create Alarm Time</string>
+    <string name="by_pressing_buttons_alarm_can_be_created_and_cancelled">By pressing buttons, Alarm can be created and cancelled.</string>
+    <string name="check_current_time_by_looking_below_real_digital_clock">Check Current time by looking below real digital clock.</string>
+    <string name="create_alarm">Create Alarm</string>
+    <string name="set_alarm_time">Set Alarm Time:</string>
+    <string name="_11_47_00_pm">11:47:00 PM</string>
+    <string name="cancel_alarm">Cancel Alarm</string>
+</resources>
