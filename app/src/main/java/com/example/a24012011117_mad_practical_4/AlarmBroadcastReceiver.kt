@@ -18,8 +18,7 @@ class AlarmBroadcastReceiver : BroadcastReceiver() {
 
                 if (str1 == "Start")
                     context.startService(intentService)
-                else if (str1 == "Stop")
-                    context.stopService(intentService)
+                else context.stopService(intentService)
             }
         }
     }
