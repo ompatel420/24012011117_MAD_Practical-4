@@ -1,14 +1,11 @@
 package com.example.a24012011117_mad_practical_4
 
-import android.annotation.SuppressLint
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.app.TimePickerDialog
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.textview.MaterialTextView
@@ -24,7 +21,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnCancelAlarm: com.google.android.material.button.MaterialButton
     private lateinit var tvSetAlarmTime: MaterialTextView
 
-    @RequiresApi(Build.VERSION_CODES.S)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -47,7 +43,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.S)
     private fun showTimerDialog() {
         val cldr: Calendar = Calendar.getInstance()
         val hour: Int = cldr.get(Calendar.HOUR_OF_DAY)
@@ -63,7 +58,6 @@ class MainActivity : AppCompatActivity() {
         picker.show()
     }
 
-    @RequiresApi(Build.VERSION_CODES.S)
     private fun sendDialogDataToActivity(hour: Int, minute: Int) {
         val alarmCalendar = Calendar.getInstance()
         val now = Calendar.getInstance()
@@ -96,8 +90,6 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
     }
 
-    @SuppressLint("MissingPermission")
-    @RequiresApi(Build.VERSION_CODES.S)
     private fun setAlarm(millisTime: Long, str: String) {
         val intent = Intent(this, AlarmBroadcastReceiver::class.java)
         intent.putExtra("Service1", str)
